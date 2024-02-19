@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Parallax Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="progress"></div>
+
+    <div class="cube-wrap">
+        <div class="cube">
+            <svg class="side top" data-side="top" viewBox="0 0 100 100">
+                <circle data-circle="top" cx="50" cy="50" r="5" fill="red" />
+            </svg>
+            <svg class="side bottom" data-side="bottom" viewBox="0 0 100 100">
+                <circle data-circle="bottom" cx="50" cy="50" r="5" fill="red" />
+            </svg>
+            <svg class="side front" data-side="front" viewBox="0 0 100 100">
+                <circle data-circle="front" cx="50" cy="50" r="5" fill="red" />
+            </svg>
+            <svg class="side back" data-side="back" viewBox="0 0 100 100">
+                <circle data-circle="back" cx="50" cy="50" r="5" fill="red" />
+            </svg>
+            <svg class="side left" data-side="left" viewBox="0 0 100 100">
+                <circle data-circle="left" cx="50" cy="50" r="5" fill="red" />
+            </svg>
+            <svg class="side right" data-side="right" viewBox="0 0 100 100">
+                <circle data-circle="right" cx="50" cy="50" r="5" fill="red" />
+            </svg>
+        </div>
+    </div>
+    <div class="asset" data-asset="front">
+
+        <video muted="" loop autoplay="" disablepictureinpicture="" disableremoteplayback="" playsinline=""
+            preload="auto" poster="https://media.w3.org/2010/05/sintel/poster.png">
+            <source src="https://cdn.bitdegree.org/learn/Pexels%20Videos%203373.mp4?raw=true" type="video/mp4">
+            <source src="https://cdn.bitdegree.org/learn/Pexels%20Videos%204754.ogg?raw=true" type="video/ogg">
+
+            <p>Your user agent does not support the HTML5 Video element.</p>
+        </video>
+        front pane
+    </div>
+    <div class="asset" data-asset="left">
+
+        <video muted="" loop autoplay="" disablepictureinpicture="" disableremoteplayback="" playsinline=""
+            preload="auto" poster="https://media.w3.org/2010/05/sintel/poster.png">
+            <source src="https://cdn.bitdegree.org/learn/Pexels%20Videos%203373.mp4?raw=true" type="video/mp4">
+            <source src="https://cdn.bitdegree.org/learn/Pexels%20Videos%204754.ogg?raw=true" type="video/ogg">
+
+            <p>Your user agent does not support the HTML5 Video element.</p>
+        </video>
+        left pane
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
