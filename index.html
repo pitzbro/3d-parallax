@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <div class="progress"></div>
+    <div id="clock" class="clock">06:12</div>
 
     <div class="cube-wrap">
         <div class="cube">
@@ -41,7 +41,7 @@
                                 stroke-width=".946" opacity=".33" />
                             <use xlink:href="#b" stroke-dasharray="3.783 3.783" stroke-miterlimit="3.864"
                                 stroke-width=".5" />
-                            <path fill="#366638" stroke="#787878" stroke-dasharray="3.783 3.783"
+                            <path class="color-animation" fill="#366638" stroke="#787878" stroke-dasharray="3.783 3.783"
                                 stroke-miterlimit="3.864" stroke-width=".946"
                                 d="M42.176 143.996c6.643.804 14.37 2.423 22.412 1.01 2.642-.464 4.702 1.755 7.204 2.649 1.64.59 3.096 1.408 4.687 2.062 2.311.956 4.95 1.399 7.213 2.334 2.356.972 4.46 2.335 6.975 3.141 2.508.805-7.102 8.068-12.076 12.985-1.438 1.421-1.884 3.62-.975 5.426 1.749 3.476 2.157 13.681 4.759 13.018l11.076 4.053 8.149 8.251c19.355 3.149 10.224.317 25.618 5.542 11.48 3.898 10.249 5.173 13.197 2.507 0 0 15.526 10.179 17.116 10.003 5.087-.566 13.894-12.904 19.002-13.379 3.997-.375 18.976-12.545 20.993-8.938 18.565 33.211 40.648 57.142 46.086 52.737 4.371-3.541 14.378-85.627 14.378-85.627 3.895-2.051 9.648 5.011 14.014 5.658 5.48.813 13.071.403 21.225 3.48 6.172 2.328 14.315-6.554 17.846-6.21 6.612.65 14.913-.932 21.519-.793 0 0 15.23 4.666 22.402 1.973 3.351-1.258-.805-9.096 2.143-7.349 13.286 7.872 28.307 3.197 37.486-1.973 1.04-.586 5.401-12.415 5.86-12.329.712.126 7.253-1.17 8.463-1.117 4.722.199 9.598.349 14.311 1.019l5.947-4.817c.132-4.349.662-16.216 1.047-20.239.295-2.944 20.859-8.474 23.082-10.276 1.493-1.21 9.247-50.434 8.831-52.297-.606-2.711-30.683 5.19-31.74 2.134l-44.792.381-10.683-.396-14.154-.356-30.881 1.518-14.997.765-37.523.477-48.827-.856-26.762-2.86-26.612-2.827-17.409-.338-6.683-.863-10.109-2.028-14.148-3.802-17.058-5.388-13.999-5.3c-.264.618-13.496 25.613-17.021 33.124 0 0-4.545 9.962-4.985 10.909-3.125 6.842-2.937 9.496-7.31 15.526-9.041 12.466-13.833 32.268-22.8 44.79l-1.497 2.886z"
                                 opacity=".42" />
@@ -50,7 +50,7 @@
                                 opacity=".42" />
                         </g>
 
-                        <g fill="#DD7426" class="solar-waves">
+                        <g fill="#DA0A08" class="solar-waves">
                             <circle cx="180.503" cy="173.689" r="0" opacity=".35">
                                 <animate attributeName="r" from="0" to="60" dur="2s" repeatCount="indefinite"
                                     begin="0" />
@@ -272,22 +272,20 @@
                         </g> -->
                     </g>
 
-                    <circle data-circle="front" cx="180.6" cy="174" r="2" fill="red" />
-                    <circle data-circle="left" cx="437" cy="163" r="2" fill="red" />
-                    <circle data-circle="back" cx="337" cy="123" r="2" fill="red" />
+                    <circle data-circle="front" cx="180.6" cy="174" r="1.6" fill="#DA0A08" />
+                    <circle data-circle="left" cx="437" cy="163" r="1.6" fill="#DA0A08" />
+                    <circle data-circle="back" cx="337" cy="123" r="1.6" fill="#DA0A08" />
                 </svg>
             </div>
         </div>
     </div>
-    <div class="asset" data-asset="front">
+    <div class="asset" data-asset="front" style="width: clamp(100px, 26vw, 220px)">
         <div>
             <video muted="" loop autoplay="" disablepictureinpicture="" disableremoteplayback="" playsinline=""
                 preload="auto">
-                <source src="https://cdn.bitdegree.org/learn/Pexels%20Videos%203373.mp4?raw=true" type="video/mp4">
-                <source src="https://cdn.bitdegree.org/learn/Pexels%20Videos%204754.ogg?raw=true" type="video/ogg">
-
-                <p>Your user agent does not support the HTML5 Video element.</p>
+                <source src="/videos/video_003.mp4" type="video/mp4">
             </video>
+
             <span>
                 כניסת מחבלים מהשער הראשי
             </span>
@@ -298,13 +296,13 @@
     </div>
     <div class="asset" data-asset="left">
         <div>
-            <video muted="" loop autoplay="" disablepictureinpicture="" disableremoteplayback="" playsinline=""
+            <!-- <video muted="" loop autoplay="" disablepictureinpicture="" disableremoteplayback="" playsinline=""
                 preload="auto">
-                <source src="https://cdn.bitdegree.org/learn/Pexels%20Videos%203373.mp4?raw=true" type="video/mp4">
-                <source src="https://cdn.bitdegree.org/learn/Pexels%20Videos%204754.ogg?raw=true" type="video/ogg">
+                <source src="/videos/video_002.mp4" type="video/mp4">
 
                 <p>Your user agent does not support the HTML5 Video element.</p>
-            </video>
+            </video> -->
+            <img src="/images/image_003.jpg" alt="" srcset="">
             נפילת טיל בשכונה
         </div>
 
@@ -312,16 +310,17 @@
     </div>
     <div class="asset" data-asset="back">
         <div>
-            <video muted="" loop autoplay="" disablepictureinpicture="" disableremoteplayback="" playsinline=""
-                preload="auto">
-                <source src="https://cdn.bitdegree.org/learn/Pexels%20Videos%203373.mp4?raw=true" type="video/mp4">
-                <source src="https://cdn.bitdegree.org/learn/Pexels%20Videos%204754.ogg?raw=true" type="video/ogg">
-
-                <p>Your user agent does not support the HTML5 Video element.</p>
-            </video>
+            <img src="/images/image_001.jpg" alt="" srcset="">
             פריצת גדר
         </div>
     </div>
+
+    <section>
+        <h2>06:12</h2>
+        <p>
+            מטח הרקטות הגדול אי פעם לעבר מדינת ישראל. בחסותו פורצים מחבלים לישראל
+        </p>
+    </section>
     <script src="script.js"></script>
 </body>
 

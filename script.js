@@ -1,12 +1,21 @@
 const circles = Array.from(document.querySelectorAll('[data-circle]'));
 const assets = document.querySelectorAll('[data-asset]');
 
+const clock = document.querySelector('.clock');
+
 window.addEventListener('scroll', () => {
     requestAnimationFrame(moveAssets)
   }, false);
 
   function moveAssets() {
-    document.body.style.setProperty('--scroll',window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+
+    const prec = window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+
+    const time = `06:${Math.round(prec * 10) + 12}`;
+
+    clock.innerText = time;
+
+    document.body.style.setProperty('--scroll',prec);
 
     assets.forEach(asset => {
       const circle = circles.find(circle => circle.dataset.circle === asset.dataset.asset)
